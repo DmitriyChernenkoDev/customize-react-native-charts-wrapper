@@ -64,7 +64,7 @@ iOS - in file \node_modules\node_modules\react-native-charts-wrapper\ios\ReactNa
 
 in files:
 - CandleDataExtract.java;
-- CandleDataExtract.swift;   change only in quotes ("")
+- CandleDataExtract.swift;  
 - ChartDataConfig.js;
 - docs.md;
 in lib react-native-charts-wrapper 
