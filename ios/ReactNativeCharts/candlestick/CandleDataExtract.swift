@@ -89,10 +89,10 @@ class CandleDataExtract : DataExtract {
         
         
         entry = CandleChartDataEntry(x: x,
-                                     shadowH: value["shadowH"].doubleValue,
-                                     shadowL: value["shadowL"].doubleValue,
-                                     open: value["open"].doubleValue,
-                                     close: value["close"].doubleValue,
+                                     shadowH: value["H"].doubleValue,
+                                     shadowL: value["L"].doubleValue,
+                                     open: value["O"].doubleValue,
+                                     close: value["C"].doubleValue,
                                      data: value as AnyObject?)
         
         return entry;
