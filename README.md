@@ -40,3 +40,31 @@ change method <b>setCommonAxisConfig</b>, add ti line 358
         ReadableArray limitLines = propMap.getArray("limitLines");
     
 -----
+3. ### Set one indicator line
+Android - in file \node_modules\node_modules\react-native-charts-wrapper\android\src\main\java\com\github\wuxudong\rncharts\charts\ChartBaseManager.java
+		add to method setCommonAxisConfig(Chart chart, AxisBase axis, ReadableMap propMap) function  -axis.removeAllLimitLines();- wich delete all current lines
+
+		--Example---
+		// limit lines
+        if (BridgeUtils.validate(propMap, ReadableType.Array, "limitLines")) {
+            ReadableArray limitLines = propMap.getArray("limitLines");
+            axis.removeAllLimitLines();
+
+iOS - in file \node_modules\node_modules\react-native-charts-wrapper\ios\ReactNativeCharts\RNChartViewBase.swift
+		add to method setCommonAxisConfig(Chart chart, AxisBase axis, ReadableMap propMap) function  -axis.removeAllLimitLines();- wich delete all current lines
+
+		--Example---
+		// limit lines
+        // limit lines
+        if config["limitLines"].array != nil {
+            let limitLinesConfig = config["limitLines"].arrayValue
+	    axis.removeAllLimitLines();
+----
+4. Changes fields: shalowH, shalowL, close, open  to H, L, O, C
+
+in files:
+- CandleDataExtract.java;
+- CandleDataExtract.swift;   change only in quotes ("")
+- ChartDataConfig.js;
+- docs.md;
+in lib react-native-charts-wrapper 
