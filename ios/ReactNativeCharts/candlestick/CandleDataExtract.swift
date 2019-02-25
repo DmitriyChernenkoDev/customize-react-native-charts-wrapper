@@ -83,7 +83,7 @@ class CandleDataExtract : DataExtract {
             x = Double(value["x"].doubleValue);
         }
         
-        if value["shadowH"].double == nil || value["shadowL"].double == nil || value["open"].number == nil || value["close"].number == nil  {
+        if value["H"].double == nil || value["L"].double == nil || value["O"].number == nil || value["C"].number == nil  {
             fatalError("invalid data " + values.description);
         }
         
