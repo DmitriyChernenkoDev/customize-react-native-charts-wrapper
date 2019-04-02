@@ -39,6 +39,10 @@ public class CandleDataExtract extends DataExtract<CandleData, CandleEntry> {
         ChartDataSetConfigUtils.commonBarLineScatterCandleBubbleConfig(candleDataSet, config);
         ChartDataSetConfigUtils.commonLineScatterCandleRadarConfig(candleDataSet, config);
 
+        // set param showCandleBar
+        if (BridgeUtils.validate(config, ReadableType.Boolean, "showCandleBar")) {
+            candleDataSet.setShowCandleBar(config.getBoolean("showCandleBar"));
+        }
         // CandleDataSet only config
         if (BridgeUtils.validate(config, ReadableType.Number, "barSpace")) {
             candleDataSet.setBarSpace((float) config.getDouble("barSpace"));
