@@ -22,7 +22,9 @@ class CandleDataExtract : DataExtract {
         ChartDataSetConfigUtils.commonBarLineScatterCandleBubbleConfig(candleDataSet, config: config);
         ChartDataSetConfigUtils.commonLineScatterCandleRadarConfig(candleDataSet, config: config);
         
-        
+        if config["showCandleBar"].bool != nil {
+            candleDataSet.showCandleBar = config["showCandleBar"].boolValue;
+        }
         // CandleDataSet only config
         if config["barSpace"].float != nil {
             candleDataSet.barSpace = CGFloat(config["barShadowColor"].floatValue)
